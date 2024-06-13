@@ -6,13 +6,13 @@ def main():
     theme = extract_theme("theme_variables.json")
     
     main_file_path = f'{theme["file_paths"]["maximo"]}.css'
-    login_file_path = f'{theme["file_paths"]["login"]}.css'
+    #login_file_path = f'{theme["file_paths"]["login"]}.css' TODO: Login Theme Functionality
     
-    create_backup_files(theme, main_file_path, login_file_path)
+    #create_backup_files(theme, main_file_path, login_file_path) TODO: Login Theme Functionality
     
     apply_theme("Main", theme, main_file_path)
     
-    apply_theme("Login", theme, login_file_path)
+    #apply_theme("Login", theme, login_file_path) TODO: Login Theme Functionality
 
 def create_backup_files(theme: dict, main_file_path: str, login_file_path:str):
     main_file_backup_path = f'{theme["file_paths"]["maximo"]}_backup.css'
@@ -45,7 +45,7 @@ def apply_theme(on: str, theme: dict, filepath: str):
         refractor_elements(cssfile, theme, rule_indices)
         shift_image_hues(cssfile, theme, rule_indices)
     elif on.lower() in ("login"):
-        # TODO: Implement setting theme to login page
+        # TODO: Login Theme Functionality 
         return    
     
     #TODO: Uncomment this line and remove the one after, when you're done testing
@@ -100,6 +100,10 @@ def refractor_elements(cssfile: cssutils.css.CSSStyleSheet, theme: dict, rule_in
     
     for role in theme["role_elements"]:
         for element, attribute, custom_value in theme["role_elements"][role]:
+            
+            if element == "": 
+                continue
+            
             rule_index = rule_indices[element]
             rule = cssfile.cssRules[rule_index]
             
