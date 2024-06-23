@@ -5,15 +5,15 @@
     },
     "maximo_base_color": "#4177BD",
     "maximo_theme": {
-        "primary": "#5C2D91",
+        "primary": "#ED7D3A",
             "onPrimary": "#FFFFFF",
-        "secondary": "#92278F",
+        "secondary": "#EF2D56",
             "onSecondary": "#FFFFFF",
-        "tertiary": "#962071",
+        "tertiary": "#DCED31",
             "onTertiary": "#FFFFFF",
             
-        "hover": "#DBB3E4",
-        "selected": "#E8D9EB"
+        "hover": "#EF2D56",
+        "selected": "#0CCE6B"
     },
     "role_elements": {
             "primary": [
@@ -22,10 +22,8 @@
                     [".umtable", "border-color", ""],
                     [".pbspecial", "background-image", 
                     "-moz-linear-gradient(var(--secondary) 1px, var(--primary) 100%)"],
-                    [".tabgroupback, .scTabGroup", "background", 
-                    "url(\"../images/tabgroup/iot18_tabgroup_back.png\") repeat-x scroll left bottom var(--primary)"],
-                    [".subtabgroupback", "background", 
-                    "url(\"../images/tabgroup/iot18_tabgroup_back.png\") repeat-x scroll left bottom var(--primary)"],
+                    [".tabgroupback, .scTabGroup", "background", ""],
+                    [".subtabgroupback", "background", ""],
                     [".tabgroup LI", "background", ""],
                     [".tton", "color", ""],
                     [".ttoff:hover", "color", ""],
@@ -55,8 +53,8 @@
                     [".acMenuHoverText", "color", ""],
                     ["body[data-appid=startcntr] #SystemNavAppContentg-sc", "background", ""]
             ],
-                "onPrima[y": [
-                    [".retButtons  button.default", "color", ""]
+                "onPrimary": [
+                    [".retButtons button.default", "color", ""]
                 ],
             "secondary": [
                 [".fld_question", "border-color", ""],
@@ -114,8 +112,8 @@
                 [".bottomApp a, .bottomApp a:visited", "color", ""],
                 [".bottomApp a:hover, .bottomApp a:visited:hover", "color", "var(--secondary) !important"],
                 [".retButtons button", "color", ""],
-                [".retButtons  button:hover", "color", ""],
-                [".retButtons  button.default", "color", ""],
+                [".retButtons button:hover", "color", ""],
+                [".retButtons button.default", "color", ""],
                 [".dijitPopup.Popup button", "background", ""],
                 [".dijitPopup.Popup button:hover", "background", ""],
                 [".tundra .dijitTimePickerMarkerHover", "background", "var(--secondary) !important"],
@@ -127,7 +125,7 @@
                 [".bx--loading__svg", "stroke", ""]
             ],
                 "onSecondary": [
-                    [".retButtons  button.default", "color", ""]
+                    [".retButtons button.default", "color", ""]
                 ],
             "tertiary": [
                 [".ffAS:not([readonly]):not(.qSearch)", "border-bottom", "1px solid var(--tertiary) !important"],
@@ -145,7 +143,7 @@
                 [".recordHover .rechoverbutton:hover", "color", ""]
             ],
                 "onTertiary": [
-                    [".retButtons  button.default", "color", ""]
+                    [".retButtons button.default", "color", ""]
                 ],
 
             "hover": [
@@ -153,7 +151,7 @@
                 [".tch", "background", ""],
                 [".menus LI.current", "background-color", "var(--hover) !important"],
                 [".navMenus LI.current, .subNavMenus LI.current", "background-color", "var(--hover) !important"],
-                [".navMenus LI.scurrent,.subNavMenus LI.scurrent", "background-color", ""],
+                [".navMenus LI.scurrent, .subNavMenus LI.scurrent", "background-color", ""],
                 [".acMenuhoverDIV", "background", ""],
                 ["table.umtable[data-message-type=\"0\"]", "background", ""]
             ],
@@ -163,6 +161,13 @@
             ]
     },
     "images": [
-
+        ".toolbar LI A IMG",
+        ".navMenus .menuimg, .subNavMenus .menuimg",
+        ".navCollapseL[state=closed], .navCollapseR[state=closed]",
+        ".navCollapseL[state=open], .navCollapseR[state=open]",
+        ".navHead INPUT",
+        ".tc img.dButton",
+        ".di",
+        ".greybutton"
     ]
 }

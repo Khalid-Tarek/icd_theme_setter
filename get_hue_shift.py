@@ -30,7 +30,7 @@ def main(base, target):
     else:
         return {
             "shift_turn": shift_turn,
-            "shift_value": shift_turn * 360
+            "shift_value": int(shift_turn * 360)
         }
 
 if __name__ == "__main__":

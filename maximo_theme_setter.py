@@ -38,6 +38,7 @@ def extract_theme(file_path:str):
 
 def apply_theme(on: str, theme: dict, filepath: str):
     cssfile = cssutils.parseFile(filepath)
+    
     insert_theme_variables(cssfile, theme)
     rule_indices = extract_rule_indices(cssfile)
     
@@ -108,16 +109,29 @@ def refractor_elements(cssfile: cssutils.css.CSSStyleSheet, theme: dict, rule_in
             rule = cssfile.cssRules[rule_index]
             
             # Set the value to the role of the element if it doesnt have a custom value, otherwise set the value to the custom value
-            rule.style[attribute] = f'var(--{role})' if custom_value == '' else custom_value
+            if custom_value == '':
+                rule.style[attribute] = f'var(--{role})'
+            else:
+                if custom_value.find('!important') != -1:
+                    custom_value = custom_value.replace('!important', '').strip()
+                    rule.style[attribute] = (custom_value, '!important')
+                else:
+                    rule.style[attribute] = custom_value
                 
 def shift_image_hues(cssfile: cssutils.css.CSSStyleSheet, theme: dict, rule_indices: dict[str, int]):
     """
     TODO: Simplies adds a filter over all the selected images:
     
-    filter: hue-shift(<shift>)
+    filter: hue-rotate(<shift>)
     """
     
     shift = get_hue_shift.main(theme["maximo_base_color"], theme["maximo_theme"]["primary"])
+    for image_class in theme["images"]:
+        
+        rule_index = rule_indices[image_class]
+        rule = cssfile.cssRules[rule_index]
+        
+        rule.style["filter"] = f'hue-rotate({shift["shift_value"]}deg)'
 
 if __name__ == "__main__":
     main()

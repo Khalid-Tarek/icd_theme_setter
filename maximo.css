@@ -11,11 +11,14 @@
 /*	BEGIN common */
 @import url(extended.css);
 :root {
-    --primary: #5c2d91;
-    --secondary: #92278f;
-    --tertiary: #962071;
-    --hover: #dbb3e4;
-    --selected: #e8d9eb
+    --primary: #ED7D3A;
+    --onprimary: #FFF;
+    --secondary: #EF2D56;
+    --onsecondary: #FFF;
+    --tertiary: #DCED31;
+    --ontertiary: #FFF;
+    --hover: #DBB3E4;
+    --selected: #E8D9EB
     }
 @font-face {
     font-family: "MaximoBase";
@@ -236,13 +239,13 @@ img.required + .fld_req {
     }
 .fld_question {
     background: url(../images/async/question.png) no-repeat left 1px;
-    border-color: #99e4ff;
+    border-color: var(--secondary);
     padding-left: 18px;
     border-bottom-width: 2px
     }
 .fld_info {
     background: url(../images/async/info.png) no-repeat left 1px;
-    border-color: #b3d7e9;
+    border-color: var(--secondary);
     padding-left: 18px;
     border-bottom-width: 2px
     }
@@ -408,7 +411,7 @@ div {
     border: 1px solid #feb61c !important
     }
 .ffAS:not([readonly]):not(.qSearch) {
-    border-bottom: 1px solid #4178be !important;
+    border-bottom: 1px solid var(--tertiary) !important;
     color: #000
     }
 /* focusfieldreadonly */
@@ -720,7 +723,7 @@ div {
     font-size: 11px;
     font-style: normal;
     font-weight: bold;
-    background: #1d3649;
+    background: var(--secondary);
     background-repeat: no-repeat;
     background-position: left top;
     vertical-align: top;
@@ -843,7 +846,7 @@ div {
 /* large_cal_header_col_next_prev */
 .lchcnp {
     font-size: 10px;
-    color: #023465;
+    color: var(--tertiary);
     text-decoration: underline;
     cursor: pointer;
     padding-left: 1px;
@@ -1071,7 +1074,8 @@ a.sd:hover {
 .di {
     margin: 0 10px 0 0 !important;
     height: auto !important;
-    width: auto !important
+    width: auto !important;
+    filter: hue-rotate(-191deg)
     }
 .combobox td {
     padding-top: 5px
@@ -1213,7 +1217,7 @@ tr.richtextcontrol.leafspacer > td.verticalSpacer {
     }
 /* sectiontitle */
 .st {
-    color: #325C80;
+    color: var(--secondary);
     font-size: 14px;
     text-decoration: none;
     margin: 0 5px
@@ -1307,7 +1311,7 @@ tr.richtextcontrol.leafspacer > td.verticalSpacer {
     }
 /* selectable_cell */
 .scell {
-    border: 1px dashed #009;
+    border: 1px dashed var(--tertiary);
     padding: 5px;
     height: 100%
     }
@@ -1342,12 +1346,12 @@ tr.richtextcontrol.leafspacer > td.verticalSpacer {
 /* pushbutton_over */
 .dijitPopup.dijitTooltipDialogPopup button:not(#ascerr_closeimg) {
     background: transparent;
-    color: #4178be;
+    color: var(--secondary);
     border: 0;
     padding: 10px
     }
 .dijitPopup.dijitTooltipDialogPopup button:hover {
-    color: #5aaafa;
+    color: var(--secondary);
     text-decoration: underline
     }
 .dijitPopup.dijitTooltipDialogPopup .dijitTooltipContainer {
@@ -1362,15 +1366,16 @@ tr.richtextcontrol.leafspacer > td.verticalSpacer {
     padding: 5px 10px;
     margin: 2px;
     vertical-align: middle;
-    color: #4178BE;
+    color: var(--secondary);
     text-decoration: none;
-    font-size: 12px !important
+    font-size: 12px !important;
+    border-color: var(--secondary)
     }
 .pb:hover {
-    border-color: #5aaafa
+    border-color: var(--secondary)
     }
 .pb.default {
-    background: #4178BE;
+    background: var(--secondary);
     border-radius: 0;
     cursor: pointer;
     padding: 5px 10px;
@@ -1380,7 +1385,7 @@ tr.richtextcontrol.leafspacer > td.verticalSpacer {
     text-decoration: none
     }
 .pb.default:hover {
-    background: #5aaafa
+    background: var(--secondary)
     }
 .dbottom {
     margin-bottom: 5px
@@ -1401,7 +1406,7 @@ tr.richtextcontrol.leafspacer > td.verticalSpacer {
     background: transparent;
     background-image: -moz-linear-gradient(var(--secondary) 1px, var(--primary) 100%);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-    border: 1px solid #0a4e74;
+    border: 1px solid var(--tertiary);
     border-radius: 3px;
     cursor: pointer;
     padding: 0 1em;
@@ -1416,7 +1421,7 @@ tr.richtextcontrol.leafspacer > td.verticalSpacer {
     margin-top: 10px
     }
 .pbspecial:hover {
-    background-image: -moz-linear-gradient(#1a95c5 1px, #206b93 100%)
+    background-image: -moz-linear-gradient(var(--secondary) 1px, 100%)
     }
 .pbspecial:disabled {
     color: #b6d4e3
@@ -1437,7 +1442,7 @@ tr.richtextcontrol.leafspacer > td.verticalSpacer {
     width: 100%;
     padding: 0 !important;
     background: #325C80;
-    background: url(../images/tabgroup/iot18_tabgroup_back.png) repeat-x scroll left bottom var(--primary)
+    background: var(--primary)
     }
 table.tabg > tbody > tr:nth-of-type(2) > td {
     padding: 0 10px
@@ -1453,7 +1458,7 @@ table.tabg > tbody > tr:nth-of-type(2) > td {
     }
 .subtabgroupback {
     background: #325C80;
-    background: url(../images/tabgroup/iot18_tabgroup_back.png) repeat-x scroll left bottom var(--primary);
+    background: var(--primary);
     width: 100%
     }
 .subtabgroupback.wizard {
@@ -1517,14 +1522,15 @@ table.tabg > tbody > tr:nth-of-type(2) > td {
     padding: 0.2em 0.9em;
     margin: 0 10px 0 0;
     box-shadow: -2px 1px 22px 2px #fff;
-    transition: all 0.3s
+    transition: all 0.3s;
+    border-color: var(--secondary)
     }
 .tabgroupw LI.tab_li_off.done A:before {
     background: url(../images/check-mark.png) center center no-repeat #4b8400
     }
 .tabgroupw LI.tab_li_on A:before {
     content: "";
-    background-color: #4178BE
+    background-color: var(--secondary)
     }
 .tabgroupw LI A:hover:before {
     box-shadow: 1px 1px 2px #999, -1px 1px 2px #999, 1px -1px 2px #999, -1px -1px 1px #999
@@ -1539,7 +1545,7 @@ table.tabg > tbody > tr:nth-of-type(2) > td {
     transition: all 0.3s
     }
 .tabgroupw LI A.on {
-    color: #4178BE
+    color: var(--secondary)
     }
 .tablabeloff {
     color: #fff
@@ -1548,7 +1554,7 @@ table.tabg > tbody > tr:nth-of-type(2) > td {
     color: #fff
     }
 .tabgroupw LI A.on:hover, .tabgroupw .tablabel:hover {
-    color: #5aaafa
+    color: var(--secondary)
     }
 .tabgroup A {
     display: block;
@@ -1564,12 +1570,12 @@ table.tabg > tbody > tr:nth-of-type(2) > td {
     transition: all 0.3s
     }
 .tabgroup A.on {
-    background: #4178BE;
-    border-bottom: 3px solid #5AAAFA
+    background: var(--secondary);
+    border-bottom: 3px solid var(--secondary)
     }
 .tabgroup A.off {
     background: none !important;
-    border-bottom: 3px solid #4178BE
+    border-bottom: 3px solid var(--secondary)
     }
 .tabgroup A.onsel {
     background-repeat: repeat-x;
@@ -1584,11 +1590,11 @@ table.tabg > tbody > tr:nth-of-type(2) > td {
     border-bottom: 1px solid #999
     }
 .tabgroupw A.off:hover, .tabgroupw A.off:focus, .tabgroupw A.offhover {
-    color: #5aaafa
+    color: var(--secondary)
     }
 .tabgroup A.off:hover, .tabgroup A.off:focus, .tabgroup A.offhover {
-    border-bottom: 3px solid #5AAAFA;
-    color: #5aaafa
+    border-bottom: 3px solid var(--secondary);
+    color: var(--secondary)
     }
 a[role="tab"] {
     letter-spacing: 0.05ch
@@ -1855,7 +1861,7 @@ a[role="tab"] img {
     display: table-cell
     }
 .dsc1 .dbottom .invisbuttongroup tr:only-of-type td:only-of-type button:only-of-type, .dsc1 .dbottom.invisbuttongroup tr:only-of-type td:only-of-type button:only-of-type {
-    background: #4178BE;
+    background: var(--secondary);
     border: 0;
     border-radius: 0;
     cursor: pointer;
@@ -1866,7 +1872,7 @@ a[role="tab"] img {
     text-decoration: none
     }
 .dsc1 .invisbuttongroup table[role=group] button[dub] {
-    background: #4178BE;
+    background: var(--secondary);
     border: 0;
     border-radius: 0;
     cursor: pointer;
@@ -1886,7 +1892,7 @@ a[role="tab"] img {
     position: relative;
     font-size: 11px;
     font-weight: bold;
-    color: #306098
+    color: var(--tertiary)
     }
 /* END buttongroup */
 /* BEGIN fieldhelp control */
@@ -2087,7 +2093,7 @@ input[type="radio"] {
     margin-right: 4px
     }
 input[type="radio"]:focus {
-    outline: 1px solid #008abf !important
+    outline: 1px solid var(--secondary) !important
     }
 /* radiobuttongrouplabel */
 /* radiobuttonlabel */
@@ -2395,7 +2401,7 @@ g[shape-rendering="crispEdges"] rect {
     font-size: 11px;
     font-style: normal;
     font-weight: normal;
-    color: #00649d;
+    color: var(--secondary);
     text-align: right;
     text-decoration: none;
     padding-left: 5px
@@ -2412,7 +2418,7 @@ g[shape-rendering="crispEdges"] rect {
     font-size: 11px;
     font-style: normal;
     font-weight: normal;
-    color: #0033cd;
+    color: var(--secondary);
     text-align: left;
     text-decoration: none;
     padding-left: 5px
@@ -2451,7 +2457,7 @@ g[shape-rendering="crispEdges"] rect {
     background: transparent
     }
 .plinner input[type=text]:focus {
-    border-bottom: 1px solid #4178be !important
+    border-bottom: 1px solid var(--secondary) !important
     }
 .portlet_wrap {
     white-space: normal
@@ -2568,7 +2574,7 @@ g[shape-rendering="crispEdges"] rect {
     }
 /* portletlink */
 .pl {
-    color: #4178be;
+    color: var(--secondary);
     text-align: left;
     text-decoration: underline;
     padding-top: 0;
@@ -2577,11 +2583,11 @@ g[shape-rendering="crispEdges"] rect {
     padding-left: 0
     }
 .pl:hover {
-    color: #5aaafa
+    color: var(--secondary)
     }
 /* portletinternalhdrcol */
 .pihc {
-    color: #1D4770;
+    color: var(--tertiary);
     border-color: #FFF #FFF #999;
     text-align: left;
     border-style: solid;
@@ -2598,7 +2604,7 @@ g[shape-rendering="crispEdges"] rect {
 .pkr {
     text-align: left;
     vertical-align: middle;
-    color: #0033cd;
+    color: var(--secondary);
     text-decoration: none;
     padding-top: 2px;
     padding-right: 2px;
@@ -2607,19 +2613,19 @@ g[shape-rendering="crispEdges"] rect {
     }
 /* a.portletkeyrecord: */
 a.pkr:link {
-    color: #305F90;
+    color: var(--secondary);
     text-decoration: none
     }
 a.pkr:active {
-    color: #305F90;
+    color: var(--secondary);
     text-decoration: underline
     }
 a.pkr:visited {
-    color: #305F90;
+    color: var(--secondary);
     text-decoration: underline
     }
 a.pkr:hover {
-    color: #305F90;
+    color: var(--secondary);
     text-decoration: underline
     }
 /* portletscroll */
@@ -2650,7 +2656,7 @@ a.pkr:hover {
     text-decoration: underline;
     font-family: MaximoBase;
     font-size: 10px;
-    color: #036;
+    color: var(--tertiary);
     vertical-align: middle
     }
 /* rslegendvalue  */
@@ -2703,19 +2709,19 @@ a.pkr:hover {
     }
 /* a.rsdata: */
 a.rsd:link {
-    color: #4178be;
+    color: var(--secondary);
     text-decoration: none
     }
 a.rsd:visited {
-    color: #4178be;
+    color: var(--secondary);
     text-decoration: none
     }
 a.rsd:hover {
-    color: #5aaafa;
+    color: var(--secondary);
     text-decoration: underline
     }
 a.rsd:active {
-    color: #5aaafa;
+    color: var(--secondary);
     text-decoration: none
     }
 /* END resultset */
@@ -2742,7 +2748,7 @@ a.rsd:active {
 /* inboxusername */
 .ibun {
     font-weight: bold;
-    color: #00649d !important
+    color: var(--secondary) !important
     }
 /* inboxrecord */
 .ibr {
@@ -2752,12 +2758,12 @@ a.rsd:active {
     }
 /* inboxheadercol */
 .ibhc {
-    color: #1D4770;
+    color: var(--tertiary);
     margin: 2px 0
     }
 /* inboxheadercolfirst */
 .ibhcf {
-    color: #1D4770;
+    color: var(--tertiary);
     padding-left: 2px
     }
 /* END inboxporlet */
@@ -2795,7 +2801,7 @@ a.rsd:active {
     }
 /* kpiheadertextnumcol */
 .khtnc {
-    color: #1D4770;
+    color: var(--tertiary);
     text-align: right;
     border-color: #d9d9d9;
     border-style: solid;
@@ -2848,7 +2854,7 @@ a.rsd:active {
     cursor: pointer
     }
 .favappsportletlink {
-    color: #00649d
+    color: var(--secondary)
     }
 /* favappsportletlinkimg */
 .fali {
@@ -3053,7 +3059,7 @@ a.glsegment_selected:hover {
     background: #ECECEC !important
     }
 .toolbar LI A.on:focus, .toolbar LI A.on:hover, .toolbar LI A.onhover {
-    border: 1px solid #5aaafa;
+    border: 1px solid var(--secondary);
     background: #fff
     }
 .toolbar LI A.off, .dj_ie .toolbar LI A.off IMG {
@@ -3067,7 +3073,8 @@ a.glsegment_selected:hover {
     border: 0;
     margin: 0;
     margin-left: 2px;
-    outline: none
+    outline: none;
+    filter: hue-rotate(-191deg)
     }
 .menubar {
     width: 100%;
@@ -3086,7 +3093,7 @@ a.glsegment_selected:hover {
 .menubar LI A {
     vertical-align: middle;
     display: inline-block;
-    color: #4178BE;
+    color: var(--secondary);
     text-decoration: none;
     white-space: nowrap;
     margin: 0;
@@ -3330,7 +3337,8 @@ tr.Xtablerow .tc.helpHover:not(:empty):hover, input.helpHover:hover {
     background-image: url(../images/img_information_over.gif)
     }
 .tc img.dButton {
-    margin: 3px 0 0 2px !important
+    margin: 3px 0 0 2px !important;
+    filter: hue-rotate(-191deg)
     }
 .tc0 {
     padding-top: 0 !important
@@ -3358,15 +3366,15 @@ th.tc {
     }
 /* tablecurrentRow */
 .tcr {
-    background: #ddf2f9
+    background: var(--selected)
     }
 /* tableRowHover */
 .trh {
-    background: #C0E6FF
+    background: var(--hover)
     }
 /* tableCellHover */
 .tch {
-    background: #C0C0C0
+    background: var(--hover)
     }
 /* tablefilterrow */
 .tfr {
@@ -3557,7 +3565,7 @@ th.hlsel {
     padding: 0 !important
     }
 .pbt .hbouter {
-    border-bottom: 0 solid #008abf;
+    border-bottom: 0 solid var(--secondary);
     padding: 0 !important
     }
 table[role=dialog][modal=false] {
@@ -3852,7 +3860,7 @@ table.dialogi {
     border-top: 1px solid #AEAEAE
     }
 .recentAppsMenuItem a {
-    color: #4178be !important
+    color: var(--secondary) !important
     }
 .navContent li.recentAppsMenuItem {
     position: fixed;
@@ -3869,7 +3877,7 @@ table.dialogi {
     border-top: 1px solid #AEAEAE !important
     }
 .menus LI.current {
-    background-color: #C0E6FF !important
+    background-color: var(--hover) !important
     }
 .menus LI.scurrent {
     background-color: #d4dfe8 !important
@@ -4279,12 +4287,12 @@ a.fnl:hover {
     }
 .anchor {
     text-decoration: underline;
-    color: #4178be
+    color: var(--secondary)
     }
 /* color: #00649d !important; */
 .anchor:hover {
     text-decoration: underline;
-    color: #5aaafa
+    color: var(--secondary)
     }
 /* color: #05386b !important; */
 /* END basic text formatting */
@@ -4371,7 +4379,7 @@ a.fnl:hover {
 /*  tablerowmodified */
 .trmod {
     font-style: italic;
-    color: #305F90
+    color: var(--secondary)
     }
 /*  select mode - tablerowdeleted */
 .trdrcr {
@@ -4488,10 +4496,10 @@ a.fnl:hover {
     }
 .navMenus LI.current, .subNavMenus LI.current {
     cursor: pointer;
-    background-color: #C0E6FF !important
+    background-color: var(--hover) !important
     }
 .navMenus LI.scurrent, .subNavMenus LI.scurrent {
-    background-color: #C0E6FF
+    background-color: var(--hover)
     }
 .navMenus LI A {
     color: #000;
@@ -4513,7 +4521,8 @@ a.fnl:hover {
     outline: none
     }
 .navMenus LI.selectedQuery {
-    background-color: #ddf2f9
+    background-color: #ddf2f9;
+    background-selected: var(--selected)
     }
 .navMenus.hide LI A SPAN {
     visibility: hidden
@@ -4575,7 +4584,8 @@ a.fnl:hover {
 .navMenus .menuimg, .subNavMenus .menuimg {
     border: 0;
     margin: 0 5px 0 0;
-    vertical-align: middle
+    vertical-align: middle;
+    filter: hue-rotate(-191deg)
     }
 .menuOverflow {
     border-top: 1px solid #eee !important
@@ -4612,12 +4622,14 @@ a.fnl:hover {
     }
 .navCollapseL[state=open], .navCollapseR[state=open] {
     margin-left: -16px;
-    width: 0
+    width: 0;
+    filter: hue-rotate(-191deg)
     }
 .navCollapseL[state=closed], .navCollapseR[state=closed] {
     width: 12px !important;
     opacity: 0.3;
-    position: relative
+    position: relative;
+    filter: hue-rotate(-191deg)
     }
 .sectioncol:hover + .navSep .navCollapseL, .sectioncol:hover + .navSep .navCollapseR {
     opacity: 0.8
@@ -4672,7 +4684,8 @@ a.fnl:hover {
 .navHead INPUT {
     vertical-align: middle;
     width: 14px;
-    margin: 0
+    margin: 0;
+    filter: hue-rotate(-191deg)
     }
 .navTitle {
     font-size: 12px;
@@ -4712,10 +4725,10 @@ a.fnl:hover {
     padding: 2px 5px;
     margin: 1px 2px;
     cursor: pointer;
-    border: 1px solid #b7c7e1;
+    border: 1px solid var(--secondary);
     border-radius: 15px 0 0 15px;
     -moz-border-radius: 15px 0 0 15px;
-    background: #d6e3ef
+    background: var(--hover)
     }
 .acMenu LI.menuborder {
     border-top: 1px solid #AEAEAE
@@ -4732,7 +4745,7 @@ a.fnl:hover {
     vertical-align: middle
     }
 .acMenuItemBorder {
-    border-top: 1px solid #aecff7
+    border-top: 1px solid var(--secondary)
     }
 .acSubMenuText {
     color: #5a7297
@@ -4791,10 +4804,10 @@ a.fnl:hover {
     font-size: 11px
     }
 .breadcrumbButtonGroup div * {
-    color: #4178BE
+    color: var(--secondary)
     }
 .breadcrumbButtonGroup div {
-    color: #4178BE;
+    color: var(--secondary);
     background: #fff;
     height: 39px !important
     }
@@ -4847,7 +4860,8 @@ a.fnl:hover {
     vertical-align: middle;
     height: 37px;
     object-fit: none;
-    width: 31px
+    width: 31px;
+    filter: hue-rotate(-191deg)
     }
 .greybutton IMG {
     margin: 0
@@ -4888,7 +4902,7 @@ a.fnl:hover {
 .tiv_btn:hover {
     background: url(../images/buttonHover_tiv.png) repeat-x scroll center top #F8FBFE;
     border-color: #6B8FB3 #6B8FB3 #4C7399;
-    color: #036
+    color: var(--tertiary)
     }
 .selrec {
     color: #777;
@@ -4964,12 +4978,12 @@ span.breadcrumbSep {
     font-family: MaximoBase
     }
 .bottomApp a, .bottomApp a:visited {
-    color: #4178be;
+    color: var(--secondary);
     margin: 0 2px;
     line-height: 20px
     }
 .bottomApp a:hover, .bottomApp a:visited:hover {
-    color: #5aaafa !important
+    color: var(--secondary) !important
     }
 .currentApp {
     background: #fff
@@ -4995,12 +5009,12 @@ span.breadcrumbSep {
     padding: 10px 15px;
     margin: 2px;
     vertical-align: middle;
-    color: #4178BE;
+    color: var(--secondary);
     text-decoration: none;
     font-size: 14px !important
     }
 .retButtons button:hover {
-    color: #5aaafa
+    color: var(--secondary)
     }
 .retButtons button.default {
     background: #4178BE;
@@ -5010,7 +5024,7 @@ span.breadcrumbSep {
     padding: 10px 15px;
     margin: 2px;
     vertical-align: middle;
-    color: #fff;
+    color: var(--onTertiary);
     text-decoration: none
     }
 .linkedApp .titlelogo {
@@ -5101,7 +5115,7 @@ span.breadcrumbSep {
     background-image: none !important
     }
 .dijitPopup.Popup button {
-    background: #4178BE;
+    background: var(--secondary);
     border: 0;
     border-radius: 0;
     cursor: pointer;
@@ -5112,7 +5126,7 @@ span.breadcrumbSep {
     text-decoration: none
     }
 .dijitPopup.Popup button:hover {
-    background: #5aaafa
+    background: var(--secondary)
     }
 .dijitCalendarWeekTemplate {
     height: 35px
@@ -5145,21 +5159,21 @@ span.breadcrumbSep {
     font-size: 11px
     }
 .tundra .dijitTimePickerMarkerHover {
-    background: #5aaafa !important
+    background: var(--secondary) !important
     }
 .tundra .dijitTimePickerMarkerSelected {
     background: #8cd211 !important;
     color: #000
     }
 .tundra .dijitCalendarCurrentDate {
-    border: 1px solid #4178be !important
+    border: 1px solid var(--secondary) !important
     }
 .tundra .dijitCalendarSelectedDate {
     background: #8cd211 !important;
     color: #000 !important
     }
 .tundra .dijitCalendarHoveredDate {
-    background-color: #5aaafa !important;
+    background-color: var(--secondary) !important;
     border-radius: 50%
     }
 .tundra .dijitCalendarNextMonth.dijitCalendarHoveredDate {
@@ -5200,10 +5214,10 @@ span.breadcrumbSep {
     border-radius: 0;
     cursor: pointer;
     vertical-align: middle;
-    color: #4178BE
+    color: var(--secondary)
     }
 .dijitCalendarContainer tr:last-of-type td button:last-of-type:hover {
-    color: #5aaafa
+    color: var(--secondary)
     }
 .tundra .dijitTimePickerItem {
     white-space: nowrap;
@@ -5243,7 +5257,7 @@ span.breadcrumbSep {
     }
 .recordHover .sectionb {
     padding: 7px;
-    border-bottom: 1px solid #008abf;
+    border-bottom: 1px solid var(--secondary);
     border-width: 0 0 1px 0
     }
 .recordHover .sectioncol {
@@ -5346,7 +5360,7 @@ span.breadcrumbSep {
     background: url(../images/buttonHover_tiv.png) repeat-x scroll center top #F8FBFE;
     border: 1px solid #6B8FB3;
     border-color: #6B8FB3 #6B8FB3 #4C7399;
-    color: #036
+    color: var(--tertiary)
     }
 .recHovHelp {
     border: 1px solid #ccc;
@@ -5424,7 +5438,7 @@ span.breadcrumbSep {
     }
 .bx--loading__svg {
     fill: transparent;
-    stroke: #5aaafa;
+    stroke: var(--secondary);
     stroke-width: 7;
     stroke-linecap: butt;
     stroke-dasharray: 240;
@@ -5473,7 +5487,7 @@ table.umtable[data-message-type] {
     border: 0
     }
 table.umtable[data-message-type="0"] {
-    background: #c0e6ff
+    background: var(--hover)
     }
 table.umtable[data-message-type="1"] {
     background: #c8f08f
