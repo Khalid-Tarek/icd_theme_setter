@@ -2,9 +2,7 @@ import json
 import cssutils
 import get_hue_shift
 
-def main():
-    theme = extract_theme("theme_variables.json")
-    
+def main(theme: dict):    
     main_file_path = f'{theme["file_paths"]["maximo"]}.css'
     #login_file_path = f'{theme["file_paths"]["login"]}.css' TODO: Login Theme Functionality
     
@@ -26,7 +24,7 @@ def create_backup_files(theme: dict, main_file_path: str, login_file_path:str):
         with open(login_file_path, 'r') as f:
             backup.write(f.read())
 
-def extract_theme(file_path:str):
+def extract_theme(file_path:str) -> dict:
     theme = json.load(open(file_path))
     
     #Change each color role's elements' representation from array to tuple
@@ -134,4 +132,4 @@ def shift_image_hues(cssfile: cssutils.css.CSSStyleSheet, theme: dict, rule_indi
         rule.style["filter"] = f'hue-rotate({shift["shift_value"]}deg)'
 
 if __name__ == "__main__":
-    main()
+    main(extract_theme("theme_variables.json"))
