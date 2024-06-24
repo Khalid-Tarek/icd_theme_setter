@@ -7,12 +7,12 @@
     },
     "maximo_base_color": "#4177BD",
     "maximo_theme": {
-        "primary": "",
-        "onPrimary": "#FFFFFF",
+        "primary": "#ED7DFF",
+        "onPrimary": "#000",
         "secondary": "#EF2D56",
-        "onSecondary": "#FFFFFF",
+        "onSecondary": "#000",
         "tertiary": "#DCED31",
-        "onTertiary": "#FFFFFF",
+        "onTertiary": "#000",
         "hover": "#EF2D56",
         "selected": "#0CCE6B"
     },

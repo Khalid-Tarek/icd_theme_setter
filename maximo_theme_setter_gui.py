@@ -2,7 +2,7 @@ import customtkinter as ctk
 import CTkColorPicker as ctkcp
 import maximo_theme_setter
 import json
-import random
+import re
 
 theme_file_name = "theme_variables.json"
 
@@ -30,7 +30,7 @@ def main():
     deployed_maximo_path = ctk.StringVar(app, theme["file_paths"]["deployed_maximo"])
     
     #Preview Labels
-    label_theme_primary_preview = ctk.CTkLabel(app, text="Primary")
+    label_theme_primary_preview = ctk.CTkLabel(app, text="Primary", font=("bold", 12))
     label_theme_secondary_preview = ctk.CTkLabel(app, text="Secondary")
     label_theme_tertiary_preview = ctk.CTkLabel(app, text="Tertiary")
     label_theme_hover_preview = ctk.CTkLabel(app, text="Hover")
@@ -96,16 +96,39 @@ def main():
     entry_maximo_file.grid(row=7, column=2, columnspan=4, padx=5, pady=5, sticky="NEWS")
     
     #Apply button
-    apply_button = ctk.CTkButton(app, text="Apply Theme", command=lambda: apply(theme))
+    apply_button = ctk.CTkButton(app, text="Apply Theme", command=lambda: apply_theme(theme))
     apply_button.grid(row=8, column=0, columnspan=6, padx=5, pady=5, sticky="NEWS")
     
-    primary.trace_add('write', 
-                      lambda *args, 
-                      theme=theme, 
-                      key=('maximo_theme', 'primary'): 
-                          update(theme, key, primary.get()))
+    #Set Write Listeners
+    set_write_listener(theme, primary, ('maximo_theme', 'primary'), label_theme_primary_preview, "bg")
+    set_write_listener(theme, secondary, ('maximo_theme', 'secondary'), label_theme_secondary_preview, "bg")
+    set_write_listener(theme, tertiary, ('maximo_theme', 'tertiary'), label_theme_tertiary_preview, "bg")
+    set_write_listener(theme, onprimary, ('maximo_theme', 'onPrimary'), label_theme_primary_preview, "fg")
+    set_write_listener(theme, onsecondary, ('maximo_theme', 'onSecondary'), label_theme_secondary_preview, "fg")
+    set_write_listener(theme, ontertiary, ('maximo_theme', 'onTertiary'), label_theme_tertiary_preview, "fg")
+    set_write_listener(theme, hover, ('maximo_theme', 'hover'), label_theme_hover_preview, "bg")
+    set_write_listener(theme, selected, ('maximo_theme', 'selected'), label_theme_selected_preview, "bg")
+    
+    #Update on app start
+    update(theme, ('maximo_theme', 'primary'), primary.get(), label_theme_primary_preview, "bg")
+    update(theme, ('maximo_theme', 'secondary'), secondary.get(), label_theme_secondary_preview, "bg")
+    update(theme, ('maximo_theme', 'tertiary'), tertiary.get(), label_theme_tertiary_preview, "bg")
+    update(theme, ('maximo_theme', 'onPrimary'), onprimary.get(), label_theme_primary_preview, "fg")
+    update(theme, ('maximo_theme', 'onSecondary'), onsecondary.get(), label_theme_secondary_preview, "fg")
+    update(theme, ('maximo_theme', 'onTertiary'), ontertiary.get(), label_theme_tertiary_preview, "fg")
+    update(theme, ('maximo_theme', 'hover'), hover.get(), label_theme_hover_preview, "bg")
+    update(theme, ('maximo_theme', 'selected'), selected.get(), label_theme_selected_preview, "bg")
     
     app.mainloop()
+
+def set_write_listener(theme, variable, key, label_preview, property):
+    variable.trace_add('write', 
+                      lambda *args, 
+                      theme=theme, 
+                      key=key,
+                      preview=label_preview,
+                      property=property: 
+                          update(theme, key, variable.get(), preview, property))
 
 def set_file_path_buttons(entry: ctk.CTkEntry):
     entry.delete(0, ctk.END)
@@ -115,19 +138,29 @@ def set_file_path_buttons(entry: ctk.CTkEntry):
         ))
     return
 
-def apply(theme: dict):
+def apply_theme(theme: dict):
     maximo_theme_setter.main(theme)
     return
 
-def save(theme: dict):
+def save_theme(theme: dict):
     with open(theme_file_name, "w") as f:
         json.dump(theme, f, indent=4)
     return
 
-def update(theme: dict, key: tuple[str, str], value: str, ):
-    print(f"Log: key:{key}, value:{value}")
+def update(theme: dict, key: tuple[str, str], value: str, preview: ctk.CTkLabel = None, property: str = None):
     theme[key[0]][key[1]] = value
-    save(theme)
-    return
+    save_theme(theme)
+    
+    if not is_hex(value): return
+    
+    if property == 'bg':
+        preview.configure(True, bg_color=value)
+    elif property == 'fg':
+        preview.configure(True, text_color=value)
+    
 
+def is_hex(color: str):
+    hexa_code = re.compile(r'^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$')
+    return bool(re.match(hexa_code, color))
+    
 main()
