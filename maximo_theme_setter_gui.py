@@ -25,6 +25,7 @@ def main():
     ontertiary = ctk.StringVar(app, theme["maximo_theme"]["onTertiary"])
     hover = ctk.StringVar(app, theme["maximo_theme"]["hover"])
     selected = ctk.StringVar(app, theme["maximo_theme"]["selected"])
+    
     maximo_path = ctk.StringVar(app, theme["file_paths"]["maximo"])
     login_path = ctk.StringVar(app, theme["file_paths"]["login"])
     deployed_maximo_path = ctk.StringVar(app, theme["file_paths"]["deployed_maximo"])
@@ -109,6 +110,10 @@ def main():
     set_write_listener(theme, hover, ('maximo_theme', 'hover'), label_theme_hover_preview, "bg")
     set_write_listener(theme, selected, ('maximo_theme', 'selected'), label_theme_selected_preview, "bg")
     
+    set_write_listener(theme, maximo_path, ('file_paths', 'maximo'))
+    set_write_listener(theme, login_path, ('file_paths', 'login'))
+    set_write_listener(theme, deployed_maximo_path, ('file_paths', 'deployed_maximo'))
+    
     #Update on app start
     update(theme, ('maximo_theme', 'primary'), primary.get(), label_theme_primary_preview, "bg")
     update(theme, ('maximo_theme', 'secondary'), secondary.get(), label_theme_secondary_preview, "bg")
@@ -121,7 +126,7 @@ def main():
     
     app.mainloop()
 
-def set_write_listener(theme, variable, key, label_preview, property):
+def set_write_listener(theme, variable, key, label_preview = None, property = None):
     variable.trace_add('write', 
                       lambda *args, 
                       theme=theme, 
@@ -158,7 +163,6 @@ def update(theme: dict, key: tuple[str, str], value: str, preview: ctk.CTkLabel 
     elif property == 'fg':
         preview.configure(True, text_color=value)
     
-
 def is_hex(color: str):
     hexa_code = re.compile(r'^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$')
     return bool(re.match(hexa_code, color))
