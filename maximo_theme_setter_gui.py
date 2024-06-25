@@ -44,14 +44,14 @@ def main():
     label_theme_selected_preview.grid(row=1, column=3, columnspan=3, padx=5, pady=5, sticky='NEWS')
     
     #Theme Color Selectors
-    button_theme_primary = ctk.CTkButton(app, text="Primary")
-    button_theme_secondary = ctk.CTkButton(app, text="Secondary")
-    button_theme_tertiary = ctk.CTkButton(app, text="Tertiary")
-    button_theme_onprimary = ctk.CTkButton(app, text="OnPrimary")
-    button_theme_onsecondary = ctk.CTkButton(app, text="OnSecondary")
-    button_theme_ontertiary = ctk.CTkButton(app, text="OnTertiary")
-    button_theme_hover = ctk.CTkButton(app, text="Hover")
-    button_theme_selected = ctk.CTkButton(app, text="Selected")
+    button_theme_primary = ctk.CTkButton(app, text="Primary", command=lambda: pick_color(primary))
+    button_theme_secondary = ctk.CTkButton(app, text="Secondary", command=lambda: pick_color(secondary))
+    button_theme_tertiary = ctk.CTkButton(app, text="Tertiary", command=lambda: pick_color(tertiary))
+    button_theme_onprimary = ctk.CTkButton(app, text="OnPrimary", command=lambda: pick_color(onprimary))
+    button_theme_onsecondary = ctk.CTkButton(app, text="OnSecondary", command=lambda: pick_color(onsecondary))
+    button_theme_ontertiary = ctk.CTkButton(app, text="OnTertiary", command=lambda: pick_color(ontertiary))
+    button_theme_hover = ctk.CTkButton(app, text="Hover", command=lambda: pick_color(hover))
+    button_theme_selected = ctk.CTkButton(app, text="Selected", command=lambda: pick_color(selected))
 
     entry_theme_primary = ctk.CTkEntry(app, textvariable=primary)
     entry_theme_secondary = ctk.CTkEntry(app, textvariable=secondary)
@@ -85,9 +85,9 @@ def main():
     entry_deployed_maximo_file = ctk.CTkEntry(app,textvariable=deployed_maximo_path)
     entry_maximo_file = ctk.CTkEntry(app, textvariable=maximo_path)
     entry_deployed_login_file = ctk.CTkEntry(app, textvariable=login_path)
-    button_deployed_maximo_file = ctk.CTkButton(app, text="Deployed Maximo CSS", command=lambda: set_file_path_buttons(entry_deployed_maximo_file))
-    button_deployed_login_file = ctk.CTkButton(app, text="Deploy Login CSS", command=lambda: set_file_path_buttons(entry_deployed_login_file))
-    button_maximo_file = ctk.CTkButton(app, text="Maximo CSS", command=lambda: set_file_path_buttons(entry_maximo_file))
+    button_deployed_maximo_file = ctk.CTkButton(app, text="Deployed Maximo CSS", command=lambda: set_file_path_buttons(deployed_maximo_path))
+    button_deployed_login_file = ctk.CTkButton(app, text="Deploy Login CSS", command=lambda: set_file_path_buttons(login_path))
+    button_maximo_file = ctk.CTkButton(app, text="Maximo CSS", command=lambda: set_file_path_buttons(maximo_path))
     
     button_deployed_maximo_file.grid(row=5, column=0, columnspan=2, padx=5, pady=5, sticky="NEWS")
     entry_deployed_maximo_file.grid(row=5, column=2, columnspan=4, padx=5, pady=5, sticky="NEWS")
@@ -135,15 +135,19 @@ def set_write_listener(theme, variable, key, label_preview = None, property = No
                       property=property: 
                           update(theme, key, variable.get(), preview, property))
 
-def set_file_path_buttons(entry: ctk.CTkEntry):
-    entry.delete(0, ctk.END)
-    entry.insert(0, ctk.filedialog.askopenfilename(
+def set_file_path_buttons(filePathStringvar: ctk.StringVar):
+    filePathStringvar.set(ctk.filedialog.askopenfilename(
         filetypes=(("CSS Files", "*.css"),
-                ("All Files", "*.*"))
+                   ("All Files", "*.*"))
         ))
     return
 
+def pick_color(colorStringVar: ctk.StringVar):
+    colorStringVar.set(ctkcp.AskColor().get())
+    return
+
 def apply_theme(theme: dict):
+    theme = maximo_theme_setter.extract_theme(theme_file_name)
     maximo_theme_setter.main(theme)
     return
 

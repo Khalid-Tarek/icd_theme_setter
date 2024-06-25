@@ -11,14 +11,14 @@
 /*	BEGIN common */
 @import url(extended.css);
 :root {
-    --primary: #ED7D3A;
-    --onprimary: #FFF;
-    --secondary: #EF2D56;
-    --onsecondary: #FFF;
-    --tertiary: #DCED31;
-    --ontertiary: #FFF;
-    --hover: #DBB3E4;
-    --selected: #E8D9EB
+    --primary: #5c2d91;
+    --onprimary: #000;
+    --secondary: #92278f;
+    --onsecondary: #000;
+    --tertiary: #ff39e0;
+    --ontertiary: #000;
+    --hover: #fb90ff;
+    --selected: #9648ff
     }
 @font-face {
     font-family: "MaximoBase";
@@ -723,7 +723,7 @@ div {
     font-size: 11px;
     font-style: normal;
     font-weight: bold;
-    background: var(--secondary);
+    background: var(--primary);
     background-repeat: no-repeat;
     background-position: left top;
     vertical-align: top;
@@ -1075,7 +1075,7 @@ a.sd:hover {
     margin: 0 10px 0 0 !important;
     height: auto !important;
     width: auto !important;
-    filter: hue-rotate(-191deg)
+    filter: hue-rotate(54deg)
     }
 .combobox td {
     padding-top: 5px
@@ -1351,7 +1351,7 @@ tr.richtextcontrol.leafspacer > td.verticalSpacer {
     padding: 10px
     }
 .dijitPopup.dijitTooltipDialogPopup button:hover {
-    color: var(--secondary);
+    color: var(--hover);
     text-decoration: underline
     }
 .dijitPopup.dijitTooltipDialogPopup .dijitTooltipContainer {
@@ -1372,7 +1372,7 @@ tr.richtextcontrol.leafspacer > td.verticalSpacer {
     border-color: var(--secondary)
     }
 .pb:hover {
-    border-color: var(--secondary)
+    border-color: var(--hover)
     }
 .pb.default {
     background: var(--secondary);
@@ -1385,7 +1385,7 @@ tr.richtextcontrol.leafspacer > td.verticalSpacer {
     text-decoration: none
     }
 .pb.default:hover {
-    background: var(--secondary)
+    background: var(--hover)
     }
 .dbottom {
     margin-bottom: 5px
@@ -1442,7 +1442,7 @@ tr.richtextcontrol.leafspacer > td.verticalSpacer {
     width: 100%;
     padding: 0 !important;
     background: #325C80;
-    background: var(--primary)
+    background: var(--secondary)
     }
 table.tabg > tbody > tr:nth-of-type(2) > td {
     padding: 0 10px
@@ -1458,7 +1458,7 @@ table.tabg > tbody > tr:nth-of-type(2) > td {
     }
 .subtabgroupback {
     background: #325C80;
-    background: var(--primary);
+    background: var(--secondary);
     width: 100%
     }
 .subtabgroupback.wizard {
@@ -1554,7 +1554,7 @@ table.tabg > tbody > tr:nth-of-type(2) > td {
     color: #fff
     }
 .tabgroupw LI A.on:hover, .tabgroupw .tablabel:hover {
-    color: var(--secondary)
+    color: var(--hover)
     }
 .tabgroup A {
     display: block;
@@ -1570,7 +1570,7 @@ table.tabg > tbody > tr:nth-of-type(2) > td {
     transition: all 0.3s
     }
 .tabgroup A.on {
-    background: var(--secondary);
+    background: var(--selected);
     border-bottom: 3px solid var(--secondary)
     }
 .tabgroup A.off {
@@ -1590,11 +1590,11 @@ table.tabg > tbody > tr:nth-of-type(2) > td {
     border-bottom: 1px solid #999
     }
 .tabgroupw A.off:hover, .tabgroupw A.off:focus, .tabgroupw A.offhover {
-    color: var(--secondary)
+    color: var(--hover)
     }
 .tabgroup A.off:hover, .tabgroup A.off:focus, .tabgroup A.offhover {
     border-bottom: 3px solid var(--secondary);
-    color: var(--secondary)
+    color: var(--hover)
     }
 a[role="tab"] {
     letter-spacing: 0.05ch
@@ -1653,14 +1653,14 @@ a[role="tab"] img {
     vertical-align: middle;
     font-size: 11px;
     font-weight: normal;
-    color: var(--primary);
+    color: var(--hover);
     text-decoration: none
     }
 .ttoffhover {
     vertical-align: middle;
     font-size: 11px;
     font-weight: normal;
-    color: var(--primary);
+    color: var(--hover);
     text-decoration: none
     }
 .tabbody {
@@ -2250,7 +2250,7 @@ a.bbmlc:visited {
     text-decoration: none
     }
 a.bbmlc:hover {
-    color: var(--primary);
+    color: var(--hover);
     text-decoration: none
     }
 /* bbmsglineOpened */
@@ -2321,7 +2321,7 @@ a.bbmdc:visited {
     text-decoration: none
     }
 a.bbmdc:hover {
-    color: var(--primary);
+    color: var(--hover);
     text-decoration: none
     }
 /* bbmsgsummarydivider */
@@ -2410,7 +2410,7 @@ g[shape-rendering="crispEdges"] rect {
     display: none
     }
 .sco:hover {
-    color: var(--primary)
+    color: var(--hover)
     }
 /* start center switcher */
 .scs {
@@ -2583,7 +2583,7 @@ g[shape-rendering="crispEdges"] rect {
     padding-left: 0
     }
 .pl:hover {
-    color: var(--secondary)
+    color: var(--hover)
     }
 /* portletinternalhdrcol */
 .pihc {
@@ -2625,7 +2625,7 @@ a.pkr:visited {
     text-decoration: underline
     }
 a.pkr:hover {
-    color: var(--secondary);
+    color: var(--hover);
     text-decoration: underline
     }
 /* portletscroll */
@@ -2717,7 +2717,7 @@ a.rsd:visited {
     text-decoration: none
     }
 a.rsd:hover {
-    color: var(--secondary);
+    color: var(--hover);
     text-decoration: underline
     }
 a.rsd:active {
@@ -3074,7 +3074,7 @@ a.glsegment_selected:hover {
     margin: 0;
     margin-left: 2px;
     outline: none;
-    filter: hue-rotate(-191deg)
+    filter: hue-rotate(54deg)
     }
 .menubar {
     width: 100%;
@@ -3338,7 +3338,7 @@ tr.Xtablerow .tc.helpHover:not(:empty):hover, input.helpHover:hover {
     }
 .tc img.dButton {
     margin: 3px 0 0 2px !important;
-    filter: hue-rotate(-191deg)
+    filter: hue-rotate(54deg)
     }
 .tc0 {
     padding-top: 0 !important
@@ -4292,7 +4292,7 @@ a.fnl:hover {
 /* color: #00649d !important; */
 .anchor:hover {
     text-decoration: underline;
-    color: var(--secondary)
+    color: var(--hover)
     }
 /* color: #05386b !important; */
 /* END basic text formatting */
@@ -4585,7 +4585,7 @@ a.fnl:hover {
     border: 0;
     margin: 0 5px 0 0;
     vertical-align: middle;
-    filter: hue-rotate(-191deg)
+    filter: hue-rotate(54deg)
     }
 .menuOverflow {
     border-top: 1px solid #eee !important
@@ -4623,13 +4623,13 @@ a.fnl:hover {
 .navCollapseL[state=open], .navCollapseR[state=open] {
     margin-left: -16px;
     width: 0;
-    filter: hue-rotate(-191deg)
+    filter: hue-rotate(54deg)
     }
 .navCollapseL[state=closed], .navCollapseR[state=closed] {
     width: 12px !important;
     opacity: 0.3;
     position: relative;
-    filter: hue-rotate(-191deg)
+    filter: hue-rotate(54deg)
     }
 .sectioncol:hover + .navSep .navCollapseL, .sectioncol:hover + .navSep .navCollapseR {
     opacity: 0.8
@@ -4685,7 +4685,7 @@ a.fnl:hover {
     vertical-align: middle;
     width: 14px;
     margin: 0;
-    filter: hue-rotate(-191deg)
+    filter: hue-rotate(54deg)
     }
 .navTitle {
     font-size: 12px;
@@ -4751,7 +4751,7 @@ a.fnl:hover {
     color: #5a7297
     }
 .acMenuHoverText {
-    color: var(--primary)
+    color: var(--hover)
     }
 .homeButtontxtappname {
     color: #EFEFEF;
@@ -4861,7 +4861,7 @@ a.fnl:hover {
     height: 37px;
     object-fit: none;
     width: 31px;
-    filter: hue-rotate(-191deg)
+    filter: hue-rotate(54deg)
     }
 .greybutton IMG {
     margin: 0
@@ -4902,7 +4902,7 @@ a.fnl:hover {
 .tiv_btn:hover {
     background: url(../images/buttonHover_tiv.png) repeat-x scroll center top #F8FBFE;
     border-color: #6B8FB3 #6B8FB3 #4C7399;
-    color: var(--tertiary)
+    color: var(--hover)
     }
 .selrec {
     color: #777;
@@ -5014,7 +5014,7 @@ span.breadcrumbSep {
     font-size: 14px !important
     }
 .retButtons button:hover {
-    color: var(--secondary)
+    color: var(--hover)
     }
 .retButtons button.default {
     background: #4178BE;
@@ -5126,7 +5126,7 @@ span.breadcrumbSep {
     text-decoration: none
     }
 .dijitPopup.Popup button:hover {
-    background: var(--secondary)
+    background: var(--hover)
     }
 .dijitCalendarWeekTemplate {
     height: 35px
@@ -5217,7 +5217,7 @@ span.breadcrumbSep {
     color: var(--secondary)
     }
 .dijitCalendarContainer tr:last-of-type td button:last-of-type:hover {
-    color: var(--secondary)
+    color: var(--hover)
     }
 .tundra .dijitTimePickerItem {
     white-space: nowrap;
@@ -5360,7 +5360,7 @@ span.breadcrumbSep {
     background: url(../images/buttonHover_tiv.png) repeat-x scroll center top #F8FBFE;
     border: 1px solid #6B8FB3;
     border-color: #6B8FB3 #6B8FB3 #4C7399;
-    color: var(--tertiary)
+    color: var(--hover)
     }
 .recHovHelp {
     border: 1px solid #ccc;

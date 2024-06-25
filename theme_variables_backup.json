@@ -1,9 +1,7 @@
 {
     "file_paths" : {
         "maximo": "maximo_backup",
-        "login": "login",
-        "deployed_maximo": "maximo_backup",
-        "deployed_login": "login" 
+        "login": "login" 
     },
     "maximo_base_color": "#4177BD",
     "maximo_theme": {

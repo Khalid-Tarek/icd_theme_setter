@@ -1,26 +1,31 @@
 {
     "file_paths": {
         "maximo": "D:/My Scripts/maximo_theme_setter/maximo_backup.css",
-        "login": "D:/My Scripts/maximo_theme_setter/login.css",
-        "deployed_maximo": "D:/My Scripts/maximo_theme_setter/maximo.css",
+        "login": "",
+        "deployed_maximo": "D:/My Scripts/maximo_theme_setter/maximo_backup.css",
         "deployed_login": "login"
     },
     "maximo_base_color": "#4177BD",
     "maximo_theme": {
-        "primary": "#ED7DFF",
-        "onPrimary": "#000",
-        "secondary": "#EF2D56",
-        "onSecondary": "#000",
-        "tertiary": "#DCED31",
-        "onTertiary": "#000",
-        "hover": "#EF2D56",
-        "selected": "#0CCE6B"
+        "primary": "#5c2d91",
+        "onPrimary": "#000000",
+        "secondary": "#92278f",
+        "onSecondary": "#000000",
+        "tertiary": "#ff39e0",
+        "onTertiary": "#000000",
+        "hover": "#fb90ff",
+        "selected": "#9648ff"
     },
     "role_elements": {
         "primary": [
             [
                 ".tc .label",
                 "color",
+                ""
+            ],
+            [
+                ".bgnb",
+                "background",
                 ""
             ],
             [
@@ -39,32 +44,12 @@
                 "-moz-linear-gradient(var(--secondary) 1px, var(--primary) 100%)"
             ],
             [
-                ".tabgroupback, .scTabGroup",
-                "background",
-                ""
-            ],
-            [
-                ".subtabgroupback",
-                "background",
-                ""
-            ],
-            [
                 ".tabgroup LI",
                 "background",
                 ""
             ],
             [
                 ".tton",
-                "color",
-                ""
-            ],
-            [
-                ".ttoff:hover",
-                "color",
-                ""
-            ],
-            [
-                ".ttoffhover",
                 "color",
                 ""
             ],
@@ -104,11 +89,6 @@
                 ""
             ],
             [
-                "a.bbmlc:hover",
-                "color",
-                ""
-            ],
-            [
                 ".bbmdc",
                 "color",
                 ""
@@ -125,16 +105,6 @@
             ],
             [
                 "a.bbmdc:visited",
-                "color",
-                ""
-            ],
-            [
-                "a.bbmdc:hover",
-                "color",
-                ""
-            ],
-            [
-                ".sco:hover",
                 "color",
                 ""
             ],
@@ -179,11 +149,6 @@
                 ""
             ],
             [
-                ".acMenuHoverText",
-                "color",
-                ""
-            ],
-            [
                 "body[data-appid=startcntr] #SystemNavAppContentg-sc",
                 "background",
                 ""
@@ -208,11 +173,6 @@
                 ""
             ],
             [
-                ".bgnb",
-                "background",
-                ""
-            ],
-            [
                 ".st",
                 "color",
                 ""
@@ -223,8 +183,13 @@
                 ""
             ],
             [
-                ".dijitPopup.dijitTooltipDialogPopup button:hover",
-                "color",
+                ".subtabgroupback",
+                "background",
+                ""
+            ],
+            [
+                ".tabgroupback, .scTabGroup",
+                "background",
                 ""
             ],
             [
@@ -235,27 +200,12 @@
             [
                 ".pb",
                 "color",
-                ""
-            ],
-            [
-                ".pb:hover",
-                "border-color",
                 ""
             ],
             [
                 ".pb.default",
                 "background",
                 ""
-            ],
-            [
-                ".pb.default:hover",
-                "background",
-                ""
-            ],
-            [
-                ".pbspecial:hover",
-                "background-image",
-                "-moz-linear-gradient(var(--secondary) 1px,  100%)"
             ],
             [
                 ".tabgroupw LI A:before",
@@ -273,16 +223,6 @@
                 ""
             ],
             [
-                ".tabgroupw LI A.on:hover, .tabgroupw .tablabel:hover",
-                "color",
-                ""
-            ],
-            [
-                ".tabgroup A.on",
-                "background",
-                ""
-            ],
-            [
                 ".tabgroup A.on",
                 "border-bottom",
                 "3px solid var(--secondary)"
@@ -291,21 +231,6 @@
                 ".tabgroup A.off",
                 "border-bottom",
                 "3px solid var(--secondary)"
-            ],
-            [
-                ".tabgroupw A.off:hover, .tabgroupw A.off:focus, .tabgroupw A.offhover",
-                "color",
-                ""
-            ],
-            [
-                ".tabgroup A.off:hover, .tabgroup A.off:focus, .tabgroup A.offhover",
-                "border-bottom",
-                "3px solid var(--secondary)"
-            ],
-            [
-                ".tabgroup A.off:hover, .tabgroup A.off:focus, .tabgroup A.offhover",
-                "color",
-                ""
             ],
             [
                 ".dsc1 .dbottom .invisbuttongroup tr:only-of-type td:only-of-type button:only-of-type, .dsc1 .dbottom.invisbuttongroup tr:only-of-type td:only-of-type button:only-of-type",
@@ -343,11 +268,6 @@
                 ""
             ],
             [
-                ".pl:hover",
-                "color",
-                ""
-            ],
-            [
                 ".pkr",
                 "color",
                 ""
@@ -368,11 +288,6 @@
                 ""
             ],
             [
-                "a.pkr:hover",
-                "color",
-                ""
-            ],
-            [
                 "a.rsd:link",
                 "color",
                 ""
@@ -388,11 +303,6 @@
                 ""
             ],
             [
-                "a.rsd:hover",
-                "color",
-                ""
-            ],
-            [
                 ".ibun",
                 "color",
                 "var(--secondary) !important"
@@ -401,11 +311,6 @@
                 ".favappsportletlink",
                 "color",
                 ""
-            ],
-            [
-                ".toolbar LI A.on:focus, .toolbar LI A.on:hover, .toolbar LI A.onhover",
-                "border",
-                "1px solid var(--secondary)"
             ],
             [
                 ".menubar LI A",
@@ -428,19 +333,9 @@
                 ""
             ],
             [
-                ".anchor:hover",
-                "color",
-                ""
-            ],
-            [
                 ".trmod",
                 "color",
                 ""
-            ],
-            [
-                ".acMenuhoverDIV",
-                "border",
-                "1px solid var(--secondary)"
             ],
             [
                 ".acMenuItemBorder",
@@ -463,17 +358,7 @@
                 ""
             ],
             [
-                ".bottomApp a:hover, .bottomApp a:visited:hover",
-                "color",
-                "var(--secondary) !important"
-            ],
-            [
                 ".retButtons button",
-                "color",
-                ""
-            ],
-            [
-                ".retButtons button:hover",
                 "color",
                 ""
             ],
@@ -488,39 +373,14 @@
                 ""
             ],
             [
-                ".dijitPopup.Popup button:hover",
-                "background",
-                ""
-            ],
-            [
-                ".tundra .dijitTimePickerMarkerHover",
-                "background",
-                "var(--secondary) !important"
-            ],
-            [
                 ".tundra .dijitCalendarCurrentDate",
                 "border",
                 "1px solid var(--secondary) !important"
             ],
             [
-                ".tundra .dijitCalendarHoveredDate",
-                "background-color",
-                "var(--secondary) !important"
-            ],
-            [
                 ".dijitCalendarContainer tr:last-of-type td button:nth-of-type(3), .dijitCalendarContainer tr:last-of-type td button:nth-of-type(2)",
                 "color",
                 ""
-            ],
-            [
-                ".dijitCalendarContainer tr:last-of-type td button:last-of-type:hover",
-                "color",
-                ""
-            ],
-            [
-                ".recordHover .sectionb",
-                "border-bottom",
-                "1px solid var(--secondary)"
             ],
             [
                 ".bx--loading__svg",
@@ -590,16 +450,6 @@
                 ".khtnc",
                 "color",
                 ""
-            ],
-            [
-                ".tiv_btn:hover",
-                "color",
-                ""
-            ],
-            [
-                ".recordHover .rechoverbutton:hover",
-                "color",
-                ""
             ]
         ],
         "onTertiary": [
@@ -644,11 +494,161 @@
                 "table.umtable[data-message-type=\"0\"]",
                 "background",
                 ""
+            ],
+            [
+                ".tiv_btn:hover",
+                "color",
+                ""
+            ],
+            [
+                ".recordHover .rechoverbutton:hover",
+                "color",
+                ""
+            ],
+            [
+                ".dijitPopup.dijitTooltipDialogPopup button:hover",
+                "color",
+                ""
+            ],
+            [
+                ".pb:hover",
+                "border-color",
+                ""
+            ],
+            [
+                ".pb.default:hover",
+                "background",
+                ""
+            ],
+            [
+                ".pbspecial:hover",
+                "background-image",
+                "-moz-linear-gradient(var(--secondary) 1px,  100%)"
+            ],
+            [
+                ".tabgroupw LI A.on:hover, .tabgroupw .tablabel:hover",
+                "color",
+                ""
+            ],
+            [
+                ".tabgroupw A.off:hover, .tabgroupw A.off:focus, .tabgroupw A.offhover",
+                "color",
+                ""
+            ],
+            [
+                ".tabgroup A.off:hover, .tabgroup A.off:focus, .tabgroup A.offhover",
+                "border-bottom",
+                "3px solid var(--secondary)"
+            ],
+            [
+                ".tabgroup A.off:hover, .tabgroup A.off:focus, .tabgroup A.offhover",
+                "color",
+                ""
+            ],
+            [
+                ".pl:hover",
+                "color",
+                ""
+            ],
+            [
+                "a.pkr:hover",
+                "color",
+                ""
+            ],
+            [
+                "a.rsd:hover",
+                "color",
+                ""
+            ],
+            [
+                ".toolbar LI A.on:focus, .toolbar LI A.on:hover, .toolbar LI A.onhover",
+                "border",
+                "1px solid var(--secondary)"
+            ],
+            [
+                ".anchor:hover",
+                "color",
+                ""
+            ],
+            [
+                ".acMenuhoverDIV",
+                "border",
+                "1px solid var(--secondary)"
+            ],
+            [
+                ".bottomApp a:hover, .bottomApp a:visited:hover",
+                "color",
+                "var(--secondary) !important"
+            ],
+            [
+                ".retButtons button:hover",
+                "color",
+                ""
+            ],
+            [
+                ".dijitPopup.Popup button:hover",
+                "background",
+                ""
+            ],
+            [
+                ".tundra .dijitTimePickerMarkerHover",
+                "background",
+                "var(--secondary) !important"
+            ],
+            [
+                ".tundra .dijitCalendarHoveredDate",
+                "background-color",
+                "var(--secondary) !important"
+            ],
+            [
+                ".dijitCalendarContainer tr:last-of-type td button:last-of-type:hover",
+                "color",
+                ""
+            ],
+            [
+                ".recordHover .sectionb",
+                "border-bottom",
+                "1px solid var(--secondary)"
+            ],
+            [
+                ".ttoff:hover",
+                "color",
+                ""
+            ],
+            [
+                ".ttoffhover",
+                "color",
+                ""
+            ],
+            [
+                "a.bbmlc:hover",
+                "color",
+                ""
+            ],
+            [
+                "a.bbmdc:hover",
+                "color",
+                ""
+            ],
+            [
+                ".sco:hover",
+                "color",
+                ""
+            ],
+            [
+                ".acMenuHoverText",
+                "color",
+                ""
             ]
         ],
         "selected": [
             [
                 ".tcr",
+                "background",
+                ""
+            ],
+            [
+                ".tabgroup A.on",
                 "background",
                 ""
             ],

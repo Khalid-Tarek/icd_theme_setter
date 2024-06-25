@@ -3,25 +3,21 @@ import cssutils
 import get_hue_shift
 
 def main(theme: dict):    
-    main_file_path = f'{theme["file_paths"]["maximo"]}.css'
-    #login_file_path = f'{theme["file_paths"]["login"]}.css' TODO: Login Theme Functionality
+    main_file_path = theme["file_paths"]["maximo"]
+    #login_file_path = theme["file_paths"]["login"] TODO: Login Theme Functionality
     
-    #create_backup_files(theme, main_file_path, login_file_path) TODO: Login Theme Functionality
+    create_backup_file(main_file_path) 
+    #create_backup_files(theme, login_file_path) #TODO: Login Theme Functionality
     
     apply_theme("Main", theme, main_file_path)
     
     #apply_theme("Login", theme, login_file_path) TODO: Login Theme Functionality
 
-def create_backup_files(theme: dict, main_file_path: str, login_file_path:str):
-    main_file_backup_path = f'{theme["file_paths"]["maximo"]}_backup.css'
-    login_file_backup_path = f'{theme["file_paths"]["login"]}_backup.css'
+def create_backup_file(file_path: str):
+    file_backup_path = file_path[:-4] + "_backup" + file_path[-4:]
     
-    with open(main_file_backup_path, 'w') as backup:
-        with open(main_file_path, 'r') as f:
-            backup.write(f.read())
-            
-    with open(login_file_backup_path, 'w') as backup:
-        with open(login_file_path, 'r') as f:
+    with open(file_backup_path, 'w') as backup:
+        with open(file_path, 'r') as f:
             backup.write(f.read())
 
 def extract_theme(file_path:str) -> dict:
@@ -37,7 +33,9 @@ def extract_theme(file_path:str) -> dict:
 def apply_theme(on: str, theme: dict, filepath: str):
     cssfile = cssutils.parseFile(filepath)
     
-    insert_theme_variables(cssfile, theme)
+    if not isinstance(cssfile.cssRules[3], cssutils.css.CSSStyleRule):
+        insert_theme_variables(cssfile, theme)
+        
     rule_indices = extract_rule_indices(cssfile)
     
     if on.lower() in ("main", "maximo"):
