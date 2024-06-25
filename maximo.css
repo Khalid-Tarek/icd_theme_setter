@@ -17,8 +17,8 @@
     --onsecondary: #000;
     --tertiary: #ff39e0;
     --ontertiary: #000;
-    --hover: #fb90ff;
-    --selected: #9648ff
+    --hover: #bf96ec;
+    --selected: #a870e7
     }
 @font-face {
     font-family: "MaximoBase";
@@ -1498,7 +1498,7 @@ table.tabg > tbody > tr:nth-of-type(2) > td {
     list-style: none
     }
 .tabgroup LI {
-    background: var(--primary)
+    background: var(--secondary)
     }
 .tabgroupw LI:first-of-type {
     margin-left: -20px
@@ -1554,7 +1554,7 @@ table.tabg > tbody > tr:nth-of-type(2) > td {
     color: #fff
     }
 .tabgroupw LI A.on:hover, .tabgroupw .tablabel:hover {
-    color: var(--hover)
+    color: var(--tertiary)
     }
 .tabgroup A {
     display: block;
@@ -1571,7 +1571,7 @@ table.tabg > tbody > tr:nth-of-type(2) > td {
     }
 .tabgroup A.on {
     background: var(--selected);
-    border-bottom: 3px solid var(--secondary)
+    border-bottom: 3px solid var(--tertiary)
     }
 .tabgroup A.off {
     background: none !important;
@@ -1590,11 +1590,11 @@ table.tabg > tbody > tr:nth-of-type(2) > td {
     border-bottom: 1px solid #999
     }
 .tabgroupw A.off:hover, .tabgroupw A.off:focus, .tabgroupw A.offhover {
-    color: var(--hover)
+    color: var(--tertiary)
     }
 .tabgroup A.off:hover, .tabgroup A.off:focus, .tabgroup A.offhover {
-    border-bottom: 3px solid var(--secondary);
-    color: var(--hover)
+    border-bottom: 3px solid var(--tertiary);
+    color: var(--tertiary)
     }
 a[role="tab"] {
     letter-spacing: 0.05ch
@@ -2501,7 +2501,8 @@ g[shape-rendering="crispEdges"] rect {
     font-style: normal;
     line-height: 18px;
     margin-bottom: 18px !important;
-    background: #fff
+    background: #fff;
+    border-radius: 10px
     }
 .pbt div:not([data-loading]) {
     width: 100%
@@ -4867,7 +4868,7 @@ a.fnl:hover {
     margin: 0
     }
 .greybutton:hover {
-    filter: brightness(120%)
+    filter: hue-rotate(54deg) brightness(125%)
     }
 .qsField {
     padding: 2px 5px;

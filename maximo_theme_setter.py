@@ -27,7 +27,13 @@ def extract_theme(file_path:str) -> dict:
     for role_elements in theme["role_elements"]:
         for element in role_elements:
             element = tuple(element)
-            
+    
+    for image in theme["images"]:
+        image = tuple(image)
+    
+    for other in theme["others"]:
+        other = tuple(other)
+    
     return theme
 
 def apply_theme(on: str, theme: dict, filepath: str):
@@ -41,6 +47,7 @@ def apply_theme(on: str, theme: dict, filepath: str):
     if on.lower() in ("main", "maximo"):
         refractor_elements(cssfile, theme, rule_indices)
         shift_image_hues(cssfile, theme, rule_indices)
+        apply_other_changes(cssfile, theme, rule_indices)
     elif on.lower() in ("login"):
         # TODO: Login Theme Functionality 
         return    
@@ -122,12 +129,24 @@ def shift_image_hues(cssfile: cssutils.css.CSSStyleSheet, theme: dict, rule_indi
     """
     
     shift = get_hue_shift.main(theme["maximo_base_color"], theme["maximo_theme"]["primary"])
-    for image_class in theme["images"]:
+    for image_class, additional_filter in theme["images"]:
         
         rule_index = rule_indices[image_class]
         rule = cssfile.cssRules[rule_index]
         
-        rule.style["filter"] = f'hue-rotate({shift["shift_value"]}deg)'
+        rule.style["filter"] = f'hue-rotate({shift["shift_value"]}deg) {additional_filter}'
+
+def apply_other_changes(cssfile: cssutils.css.CSSStyleSheet, theme: dict, rule_indices: dict[str, int]):
+    """
+    Changes other attributes other than color in the theme
+    """
+    
+    for element, attribute, value in theme['others']:
+        rule_index = rule_indices[element]
+        rule = cssfile.cssRules[rule_index]
+        
+        rule.style[attribute] = value
+        
 
 if __name__ == "__main__":
     main(extract_theme("theme_variables.json"))

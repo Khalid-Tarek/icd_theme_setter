@@ -143,7 +143,7 @@ def set_file_path_buttons(filePathStringvar: ctk.StringVar):
     return
 
 def pick_color(colorStringVar: ctk.StringVar):
-    colorStringVar.set(ctkcp.AskColor().get())
+    colorStringVar.set(ctkcp.AskColor(initial_color=colorStringVar.get()).get())
     return
 
 def apply_theme(theme: dict):

@@ -13,8 +13,8 @@
         "onSecondary": "#000000",
         "tertiary": "#ff39e0",
         "onTertiary": "#000000",
-        "hover": "#fb90ff",
-        "selected": "#9648ff"
+        "hover": "#bf96ec",
+        "selected": "#a870e7"
     },
     "role_elements": {
         "primary": [
@@ -42,11 +42,6 @@
                 ".pbspecial",
                 "background-image",
                 "-moz-linear-gradient(var(--secondary) 1px, var(--primary) 100%)"
-            ],
-            [
-                ".tabgroup LI",
-                "background",
-                ""
             ],
             [
                 ".tton",
@@ -193,6 +188,11 @@
                 ""
             ],
             [
+                ".tabgroup LI",
+                "background",
+                ""
+            ],
+            [
                 ".pb",
                 "border-color",
                 ""
@@ -221,11 +221,6 @@
                 ".tabgroupw LI A.on",
                 "color",
                 ""
-            ],
-            [
-                ".tabgroup A.on",
-                "border-bottom",
-                "3px solid var(--secondary)"
             ],
             [
                 ".tabgroup A.off",
@@ -412,6 +407,11 @@
                 "1px dashed var(--tertiary)"
             ],
             [
+                ".tabgroup A.on",
+                "border-bottom",
+                "3px solid var(--tertiary)"
+            ],
+            [
                 ".ffAS:not([readonly]):not(.qSearch)",
                 "border-bottom",
                 "1px solid var(--tertiary) !important"
@@ -528,22 +528,22 @@
             [
                 ".tabgroupw LI A.on:hover, .tabgroupw .tablabel:hover",
                 "color",
-                ""
+                "var(--tertiary)"
             ],
             [
                 ".tabgroupw A.off:hover, .tabgroupw A.off:focus, .tabgroupw A.offhover",
                 "color",
-                ""
+                "var(--tertiary)"
             ],
             [
                 ".tabgroup A.off:hover, .tabgroup A.off:focus, .tabgroup A.offhover",
                 "border-bottom",
-                "3px solid var(--secondary)"
+                "3px solid var(--tertiary)"
             ],
             [
                 ".tabgroup A.off:hover, .tabgroup A.off:focus, .tabgroup A.offhover",
                 "color",
-                ""
+                "var(--tertiary)"
             ],
             [
                 ".pl:hover",
@@ -660,13 +660,48 @@
         ]
     },
     "images": [
-        ".toolbar LI A IMG",
-        ".navMenus .menuimg, .subNavMenus .menuimg",
-        ".navCollapseL[state=closed], .navCollapseR[state=closed]",
-        ".navCollapseL[state=open], .navCollapseR[state=open]",
-        ".navHead INPUT",
-        ".tc img.dButton",
-        ".di",
-        ".greybutton"
+        [
+            ".toolbar LI A IMG",
+            ""
+        ],
+        [
+            ".navMenus .menuimg, .subNavMenus .menuimg",
+            ""
+        ],
+        [
+            ".navCollapseL[state=closed], .navCollapseR[state=closed]",
+            ""
+        ],
+        [
+            ".navCollapseL[state=open], .navCollapseR[state=open]",
+            ""
+        ],
+        [
+            ".navHead INPUT",
+            ""
+        ],
+        [
+            ".tc img.dButton",
+            ""
+        ],
+        [
+            ".di",
+            ""
+        ],
+        [
+            ".greybutton",
+            ""
+        ],
+        [
+            ".greybutton:hover",
+            "brightness(125%)"
+        ]
+    ],
+    "others": [
+        [
+            ".pbt",
+            "border-radius",
+            "10px"
+        ]
     ]
 }
