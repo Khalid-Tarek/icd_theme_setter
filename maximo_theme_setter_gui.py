@@ -3,11 +3,13 @@ import CTkColorPicker as ctkcp
 import maximo_theme_setter
 import json
 import re
+import os
 
-theme_file_name = "theme_variables.json"
+basedir = os.path.dirname(__file__)
+theme_json_path = os.path.join(basedir, "theme_variables.json")
 
 def main():
-    theme = maximo_theme_setter.extract_theme(theme_file_name)
+    theme = maximo_theme_setter.extract_theme(theme_json_path)
     
     app = ctk.CTk()
     app.title("Maximo Theme Setter")
@@ -124,6 +126,7 @@ def main():
     update(theme, ('maximo_theme', 'hover'), hover.get(), label_theme_hover_preview, "bg")
     update(theme, ('maximo_theme', 'selected'), selected.get(), label_theme_selected_preview, "bg")
     
+    app.iconbitmap(os.path.join(basedir, "icon.ico"))
     app.mainloop()
 
 def set_write_listener(theme, variable, key, label_preview = None, property = None):
@@ -147,12 +150,12 @@ def pick_color(colorStringVar: ctk.StringVar):
     return
 
 def apply_theme(theme: dict):
-    theme = maximo_theme_setter.extract_theme(theme_file_name)
+    theme = maximo_theme_setter.extract_theme(theme_json_path)
     maximo_theme_setter.main(theme)
     return
 
 def save_theme(theme: dict):
-    with open(theme_file_name, "w") as f:
+    with open(theme_json_path, "w") as f:
         json.dump(theme, f, indent=4)
     return
 

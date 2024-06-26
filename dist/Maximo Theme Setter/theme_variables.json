@@ -1,0 +1,707 @@
+{
+    "file_paths": {
+        "maximo": "D:/My Scripts/maximo_theme_setter/maximo_backup.css",
+        "login": "",
+        "deployed_maximo": "D:/My Scripts/maximo_theme_setter/maximo_backup.css",
+        "deployed_login": "login"
+    },
+    "maximo_base_color": "#4177BD",
+    "maximo_theme": {
+        "primary": "#5c2d91",
+        "onPrimary": "#000000",
+        "secondary": "#92278f",
+        "onSecondary": "#000000",
+        "tertiary": "#ff39e0",
+        "onTertiary": "#000000",
+        "hover": "#bf96ec",
+        "selected": "#a870e7"
+    },
+    "role_elements": {
+        "primary": [
+            [
+                ".tc .label",
+                "color",
+                ""
+            ],
+            [
+                ".bgnb",
+                "background",
+                ""
+            ],
+            [
+                ".bgnbp",
+                "background-color",
+                ""
+            ],
+            [
+                ".umtable",
+                "border-color",
+                ""
+            ],
+            [
+                ".pbspecial",
+                "background-image",
+                "-moz-linear-gradient(var(--secondary) 1px, var(--primary) 100%)"
+            ],
+            [
+                ".tton",
+                "color",
+                ""
+            ],
+            [
+                ".helpgrid",
+                "color",
+                ""
+            ],
+            [
+                ".help",
+                "color",
+                ""
+            ],
+            [
+                ".bbpl",
+                "color",
+                ""
+            ],
+            [
+                ".bbmlc",
+                "color",
+                ""
+            ],
+            [
+                "a.bbmlc:link",
+                "color",
+                ""
+            ],
+            [
+                "a.bbmlc:active",
+                "color",
+                ""
+            ],
+            [
+                "a.bbmlc:visited",
+                "color",
+                ""
+            ],
+            [
+                ".bbmdc",
+                "color",
+                ""
+            ],
+            [
+                "a.bbmdc:link",
+                "color",
+                ""
+            ],
+            [
+                "a.bbmdc:active",
+                "color",
+                ""
+            ],
+            [
+                "a.bbmdc:visited",
+                "color",
+                ""
+            ],
+            [
+                ".scoo",
+                "background",
+                ""
+            ],
+            [
+                ".psc",
+                "background",
+                ""
+            ],
+            [
+                ".pih",
+                "color",
+                ""
+            ],
+            [
+                ".pt",
+                "color",
+                ""
+            ],
+            [
+                ".kub",
+                "color",
+                ""
+            ],
+            [
+                ".tht.anchor",
+                "color",
+                ""
+            ],
+            [
+                ".navSep",
+                "background",
+                ""
+            ],
+            [
+                ".navTitle",
+                "color",
+                ""
+            ],
+            [
+                "body[data-appid=startcntr] #SystemNavAppContentg-sc",
+                "background",
+                ""
+            ]
+        ],
+        "onPrimary": [
+            [
+                ".retButtons button.default",
+                "color",
+                ""
+            ]
+        ],
+        "secondary": [
+            [
+                ".fld_question",
+                "border-color",
+                ""
+            ],
+            [
+                ".fld_info",
+                "border-color",
+                ""
+            ],
+            [
+                ".st",
+                "color",
+                ""
+            ],
+            [
+                ".dijitPopup.dijitTooltipDialogPopup button:not(#ascerr_closeimg)",
+                "color",
+                ""
+            ],
+            [
+                ".subtabgroupback",
+                "background",
+                ""
+            ],
+            [
+                ".tabgroupback, .scTabGroup",
+                "background",
+                ""
+            ],
+            [
+                ".tabgroup LI",
+                "background",
+                ""
+            ],
+            [
+                ".pb",
+                "border-color",
+                ""
+            ],
+            [
+                ".pb",
+                "color",
+                ""
+            ],
+            [
+                ".pb.default",
+                "background",
+                ""
+            ],
+            [
+                ".tabgroupw LI A:before",
+                "border-color",
+                ""
+            ],
+            [
+                ".tabgroupw LI.tab_li_on A:before",
+                "background-color",
+                ""
+            ],
+            [
+                ".tabgroupw LI A.on",
+                "color",
+                ""
+            ],
+            [
+                ".tabgroup A.off",
+                "border-bottom",
+                "3px solid var(--secondary)"
+            ],
+            [
+                ".dsc1 .dbottom .invisbuttongroup tr:only-of-type td:only-of-type button:only-of-type, .dsc1 .dbottom.invisbuttongroup tr:only-of-type td:only-of-type button:only-of-type",
+                "background",
+                ""
+            ],
+            [
+                ".dsc1 .invisbuttongroup table[role=group] button[dub]",
+                "background",
+                ""
+            ],
+            [
+                "input[type=\"radio\"]:focus",
+                "outline",
+                "1px solid var(--secondary) !important"
+            ],
+            [
+                ".sco",
+                "color",
+                ""
+            ],
+            [
+                ".scs",
+                "color",
+                ""
+            ],
+            [
+                ".plinner input[type=text]:focus",
+                "border-bottom",
+                "1px solid var(--secondary) !important"
+            ],
+            [
+                ".pl",
+                "color",
+                ""
+            ],
+            [
+                ".pkr",
+                "color",
+                ""
+            ],
+            [
+                "a.pkr:link",
+                "color",
+                ""
+            ],
+            [
+                "a.pkr:active",
+                "color",
+                ""
+            ],
+            [
+                "a.pkr:visited",
+                "color",
+                ""
+            ],
+            [
+                "a.rsd:link",
+                "color",
+                ""
+            ],
+            [
+                "a.rsd:active",
+                "color",
+                ""
+            ],
+            [
+                "a.rsd:visited",
+                "color",
+                ""
+            ],
+            [
+                ".ibun",
+                "color",
+                "var(--secondary) !important"
+            ],
+            [
+                ".favappsportletlink",
+                "color",
+                ""
+            ],
+            [
+                ".menubar LI A",
+                "color",
+                ""
+            ],
+            [
+                ".pbt .hbouter",
+                "border-bottom",
+                "0px solid var(--secondary)"
+            ],
+            [
+                ".recentAppsMenuItem a",
+                "color",
+                "var(--secondary) !important"
+            ],
+            [
+                ".anchor",
+                "color",
+                ""
+            ],
+            [
+                ".trmod",
+                "color",
+                ""
+            ],
+            [
+                ".acMenuItemBorder",
+                "border-top",
+                "1px solid var(--secondary)"
+            ],
+            [
+                ".breadcrumbButtonGroup div *",
+                "color",
+                ""
+            ],
+            [
+                ".breadcrumbButtonGroup div",
+                "color",
+                ""
+            ],
+            [
+                ".bottomApp a, .bottomApp a:visited",
+                "color",
+                ""
+            ],
+            [
+                ".retButtons button",
+                "color",
+                ""
+            ],
+            [
+                ".retButtons button.default",
+                "color",
+                ""
+            ],
+            [
+                ".dijitPopup.Popup button",
+                "background",
+                ""
+            ],
+            [
+                ".tundra .dijitCalendarCurrentDate",
+                "border",
+                "1px solid var(--secondary) !important"
+            ],
+            [
+                ".dijitCalendarContainer tr:last-of-type td button:nth-of-type(3), .dijitCalendarContainer tr:last-of-type td button:nth-of-type(2)",
+                "color",
+                ""
+            ],
+            [
+                ".bx--loading__svg",
+                "stroke",
+                ""
+            ]
+        ],
+        "onSecondary": [
+            [
+                ".retButtons button.default",
+                "color",
+                ""
+            ]
+        ],
+        "tertiary": [
+            [
+                ".ffAS:not([readonly]):not(.qSearch)",
+                "border-bottom",
+                "1px solid var(--tertiary) !important"
+            ],
+            [
+                ".lchcnp",
+                "color",
+                ""
+            ],
+            [
+                ".scell",
+                "border",
+                "1px dashed var(--tertiary)"
+            ],
+            [
+                ".tabgroup A.on",
+                "border-bottom",
+                "3px solid var(--tertiary)"
+            ],
+            [
+                ".ffAS:not([readonly]):not(.qSearch)",
+                "border-bottom",
+                "1px solid var(--tertiary) !important"
+            ],
+            [
+                ".pbspecial",
+                "border",
+                "1px solid var(--tertiary)"
+            ],
+            [
+                ".buttongrouplabel",
+                "color",
+                ""
+            ],
+            [
+                ".pihc",
+                "color",
+                ""
+            ],
+            [
+                ".rsfil",
+                "color",
+                ""
+            ],
+            [
+                ".ibhc",
+                "color",
+                ""
+            ],
+            [
+                ".ibhcf",
+                "color",
+                ""
+            ],
+            [
+                ".khtnc",
+                "color",
+                ""
+            ]
+        ],
+        "onTertiary": [
+            [
+                ".retButtons button.default",
+                "color",
+                ""
+            ]
+        ],
+        "hover": [
+            [
+                ".trh",
+                "background",
+                ""
+            ],
+            [
+                ".tch",
+                "background",
+                ""
+            ],
+            [
+                ".menus LI.current",
+                "background-color",
+                "var(--hover) !important"
+            ],
+            [
+                ".navMenus LI.current, .subNavMenus LI.current",
+                "background-color",
+                "var(--hover) !important"
+            ],
+            [
+                ".navMenus LI.scurrent, .subNavMenus LI.scurrent",
+                "background-color",
+                ""
+            ],
+            [
+                ".acMenuhoverDIV",
+                "background",
+                ""
+            ],
+            [
+                "table.umtable[data-message-type=\"0\"]",
+                "background",
+                ""
+            ],
+            [
+                ".tiv_btn:hover",
+                "color",
+                ""
+            ],
+            [
+                ".recordHover .rechoverbutton:hover",
+                "color",
+                ""
+            ],
+            [
+                ".dijitPopup.dijitTooltipDialogPopup button:hover",
+                "color",
+                ""
+            ],
+            [
+                ".pb:hover",
+                "border-color",
+                ""
+            ],
+            [
+                ".pb.default:hover",
+                "background",
+                ""
+            ],
+            [
+                ".pbspecial:hover",
+                "background-image",
+                "-moz-linear-gradient(var(--secondary) 1px,  100%)"
+            ],
+            [
+                ".tabgroupw LI A.on:hover, .tabgroupw .tablabel:hover",
+                "color",
+                "var(--tertiary)"
+            ],
+            [
+                ".tabgroupw A.off:hover, .tabgroupw A.off:focus, .tabgroupw A.offhover",
+                "color",
+                "var(--tertiary)"
+            ],
+            [
+                ".tabgroup A.off:hover, .tabgroup A.off:focus, .tabgroup A.offhover",
+                "border-bottom",
+                "3px solid var(--tertiary)"
+            ],
+            [
+                ".tabgroup A.off:hover, .tabgroup A.off:focus, .tabgroup A.offhover",
+                "color",
+                "var(--tertiary)"
+            ],
+            [
+                ".pl:hover",
+                "color",
+                ""
+            ],
+            [
+                "a.pkr:hover",
+                "color",
+                ""
+            ],
+            [
+                "a.rsd:hover",
+                "color",
+                ""
+            ],
+            [
+                ".toolbar LI A.on:focus, .toolbar LI A.on:hover, .toolbar LI A.onhover",
+                "border",
+                "1px solid var(--secondary)"
+            ],
+            [
+                ".anchor:hover",
+                "color",
+                ""
+            ],
+            [
+                ".acMenuhoverDIV",
+                "border",
+                "1px solid var(--secondary)"
+            ],
+            [
+                ".bottomApp a:hover, .bottomApp a:visited:hover",
+                "color",
+                "var(--secondary) !important"
+            ],
+            [
+                ".retButtons button:hover",
+                "color",
+                ""
+            ],
+            [
+                ".dijitPopup.Popup button:hover",
+                "background",
+                ""
+            ],
+            [
+                ".tundra .dijitTimePickerMarkerHover",
+                "background",
+                "var(--secondary) !important"
+            ],
+            [
+                ".tundra .dijitCalendarHoveredDate",
+                "background-color",
+                "var(--secondary) !important"
+            ],
+            [
+                ".dijitCalendarContainer tr:last-of-type td button:last-of-type:hover",
+                "color",
+                ""
+            ],
+            [
+                ".recordHover .sectionb",
+                "border-bottom",
+                "1px solid var(--secondary)"
+            ],
+            [
+                ".ttoff:hover",
+                "color",
+                ""
+            ],
+            [
+                ".ttoffhover",
+                "color",
+                ""
+            ],
+            [
+                "a.bbmlc:hover",
+                "color",
+                ""
+            ],
+            [
+                "a.bbmdc:hover",
+                "color",
+                ""
+            ],
+            [
+                ".sco:hover",
+                "color",
+                ""
+            ],
+            [
+                ".acMenuHoverText",
+                "color",
+                ""
+            ]
+        ],
+        "selected": [
+            [
+                ".tcr",
+                "background",
+                ""
+            ],
+            [
+                ".tabgroup A.on",
+                "background",
+                ""
+            ],
+            [
+                ".navMenus LI.selectedQuery",
+                "background-selected",
+                ""
+            ]
+        ]
+    },
+    "images": [
+        [
+            ".toolbar LI A IMG",
+            ""
+        ],
+        [
+            ".navMenus .menuimg, .subNavMenus .menuimg",
+            ""
+        ],
+        [
+            ".navCollapseL[state=closed], .navCollapseR[state=closed]",
+            ""
+        ],
+        [
+            ".navCollapseL[state=open], .navCollapseR[state=open]",
+            ""
+        ],
+        [
+            ".navHead INPUT",
+            ""
+        ],
+        [
+            ".tc img.dButton",
+            ""
+        ],
+        [
+            ".di",
+            ""
+        ],
+        [
+            ".greybutton",
+            ""
+        ],
+        [
+            ".greybutton:hover",
+            "brightness(125%)"
+        ]
+    ],
+    "others": [
+        [
+            ".pbt",
+            "border-radius",
+            "10px"
+        ]
+    ]
+}
